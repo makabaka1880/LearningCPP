@@ -1,17 +1,14 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "lldb",
+            "type": "lldb", // Using LLDB debugger for macOS
             "request": "launch",
             "name": "Debug",
-            "program": "${workspaceFolder}/build/${fileBasename}", // Path to your compiled binary
-            "args": [], // Optional arguments to pass to the program
-            "cwd": "${workspaceFolder}", // Current working directory
-            "preLaunchTask": "build", // Build task before launching (optional)
+            "program": "${fileDirname}/build/${fileBasenameNoExtension}", // Path to the compiled binary
+            "args": [], // Optional: Add arguments to pass to the program
+            "cwd": "${fileDirname}", // Current working directory
+            "preLaunchTask": "build" // Build task before debugging
         }
     ]
 }

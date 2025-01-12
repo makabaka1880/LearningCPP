@@ -4,12 +4,10 @@
         {
             "label": "build",
             "type": "shell",
-            "command": "g++",
+            "command": "bash",
             "args": [
-                "-g", // Include debugging information
-                "${workspaceFolder}/${fileBasename}", // Path to your source file
-                "-o",
-                "${workspaceFolder}/build/${fileBasename}" // Output binary path (replace 'my_program' with your desired name)
+                "-c", // Run multiple commands in one shell
+                "mkdir -p ${fileDirname}/build && g++ -g ${file} -o ${fileDirname}/build/${fileBasenameNoExtension}"
             ],
             "group": {
                 "kind": "build",
