@@ -1,0 +1,22 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g", // Include debugging information
+                "${workspaceFolder}/${fileBasename}", // Path to your source file
+                "-o",
+                "${workspaceFolder}/build/${fileBasename}" // Output binary path (replace 'my_program' with your desired name)
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Generated task for building the C++ program"
+        }
+    ]
+}
